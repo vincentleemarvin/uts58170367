@@ -1,0 +1,74 @@
+
+<form>
+  <h1>Hero Form</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Kode Matkul</mat-label>
+    <input
+      matInput
+      placeholder="type the hero name"
+      name="kodeMatkul"
+      id="kodeMatkul"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Nama Matkul</mat-label>
+    <input
+      matInput
+      placeholder="type the real name"
+      name="namaMatkul"
+      id="namaMatkul"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Dosen Pengajar</mat-label>
+    <input
+      matInput
+      placeholder="type the real name"
+      name="dosen"
+      id="dosen"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Semester</mat-label>
+    <mat-select name="semester" id="semester" >
+      <mat-option value="GNP">
+        Genap
+      </mat-option>
+      <mat-option value="GJL">
+        Ganjil
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Tahun Akademi</mat-label>
+    <mat-select name="tahun" id="tahun" >
+      <mat-option value="17">
+        2017/2018
+      </mat-option>
+      <mat-option value="18">
+        2018/2019
+      </mat-option>
+      <mat-option value="19">
+        2019/2020
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="buttons">
+    <div *ngIf="update">
+      <button mat-raised-button color="warn" >
+        delete
+      </button>
+      <button mat-raised-button color="primary" >
+        update
+      </button>
+    </div>
+    <div *ngIf="!update">
+      <button mat-raised-button color="primary">
+        post
+      </button>
+    </div>
+  </div>
+</form>
